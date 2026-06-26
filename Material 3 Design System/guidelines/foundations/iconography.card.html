@@ -1,0 +1,39 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Iconography — Material Symbols" subtitle="Rounded optical set, variable weight & fill" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: var(--md-sys-color-surface); font-family: var(--md-sys-typescale-font-plain); color: var(--md-sys-color-on-surface); }
+  .label { font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--md-sys-color-on-surface-variant); margin: 0 0 12px; }
+  .row { display: flex; gap: 22px; align-items: center; margin-bottom: 18px; }
+  .m3-icon.big { font-size: 32px; color: var(--md-sys-color-on-surface-variant); }
+  .pair { display: flex; gap: 24px; align-items: center; }
+  .cell { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .cap { font-size: 11px; color: var(--md-sys-color-on-surface-variant); }
+</style>
+</head>
+<body>
+<p class="label">Common glyphs (rounded)</p>
+<div class="row">
+  <span class="m3-icon big">home</span>
+  <span class="m3-icon big">search</span>
+  <span class="m3-icon big">favorite</span>
+  <span class="m3-icon big">settings</span>
+  <span class="m3-icon big">account_circle</span>
+  <span class="m3-icon big">notifications</span>
+  <span class="m3-icon big">delete</span>
+  <span class="m3-icon big">add</span>
+  <span class="m3-icon big">check_circle</span>
+  <span class="m3-icon big">chat_bubble</span>
+</div>
+<p class="label">Fill axis (outlined → filled for selected states)</p>
+<div class="pair">
+  <div class="cell"><span class="m3-icon" style="font-size:32px;color:var(--md-sys-color-on-surface-variant)">star</span><span class="cap">FILL 0</span></div>
+  <div class="cell"><span class="m3-icon" data-filled="true" style="font-size:32px;color:var(--md-sys-color-primary)">star</span><span class="cap">FILL 1</span></div>
+  <div class="cell"><span class="m3-icon" style="font-size:32px;color:var(--md-sys-color-on-surface-variant)">bookmark</span><span class="cap">FILL 0</span></div>
+  <div class="cell"><span class="m3-icon" data-filled="true" style="font-size:32px;color:var(--md-sys-color-primary)">bookmark</span><span class="cap">FILL 1</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Surfaces & Neutrals" subtitle="Surface container tones + outline + on-surface text" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 20px; background: var(--md-sys-color-background); font-family: var(--md-sys-typescale-font-plain); }
+  .row { display: flex; gap: 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--md-sys-color-outline-variant); margin-bottom: 14px; }
+  .sw { flex: 1; height: 64px; display: flex; align-items: flex-end; padding: 6px 8px; font-size: 10px; color: var(--md-sys-color-on-surface); box-sizing: border-box; }
+  .meta { display: flex; gap: 12px; align-items: center; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: var(--md-sys-color-on-surface-variant); }
+  .dot { width: 18px; height: 18px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="sw" style="background:var(--md-sys-color-surface-container-lowest)">Lowest</div>
+  <div class="sw" style="background:var(--md-sys-color-surface-container-low)">Low</div>
+  <div class="sw" style="background:var(--md-sys-color-surface-container)">Container</div>
+  <div class="sw" style="background:var(--md-sys-color-surface-container-high)">High</div>
+  <div class="sw" style="background:var(--md-sys-color-surface-container-highest)">Highest</div>
+</div>
+<div class="meta">
+  <span class="chip"><span class="dot" style="background:var(--md-sys-color-outline)"></span>outline</span>
+  <span class="chip"><span class="dot" style="background:var(--md-sys-color-outline-variant)"></span>outline-variant</span>
+  <span class="chip"><span class="dot" style="background:var(--md-sys-color-on-surface)"></span>on-surface</span>
+  <span class="chip"><span class="dot" style="background:var(--md-sys-color-on-surface-variant)"></span>on-surface-variant</span>
+  <span class="chip"><span class="dot" style="background:var(--md-sys-color-inverse-surface)"></span>inverse-surface</span>
+</div>
+</body>
+</html>

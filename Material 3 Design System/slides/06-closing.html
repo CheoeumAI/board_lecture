@@ -1,0 +1,37 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Closing slide" subtitle="Recap + next steps, tertiary container" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html, body { margin: 0; }
+  .slide {
+    width: 1280px; height: 720px; box-sizing: border-box;
+    background: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    font-family: var(--md-sys-typescale-font-plain);
+    padding: 96px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  h2 { margin: 0; font-size: 80px; line-height: 1.05; font-weight: 400; letter-spacing: -1px; }
+  .next { display: flex; gap: 16px; margin-top: 48px; }
+  .pill { display: inline-flex; align-items: center; gap: 10px; background: color-mix(in srgb, var(--md-sys-color-on-tertiary-container) 12%, transparent); padding: 14px 24px; border-radius: 999px; font-size: 22px; font-weight: 500; }
+  .pill .m3-icon { font-size: 24px; }
+  .brand { position: absolute; bottom: 64px; left: 96px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 500; }
+  .brand .m3-icon { font-size: 32px; }
+  .glyph { position: absolute; right: -30px; top: -30px; font-size: 360px; opacity: .12; }
+</style>
+</head>
+<body>
+<section class="slide" data-screen-label="Closing">
+  <h2>다음 주에 만나요</h2>
+  <div class="next">
+    <span class="pill"><span class="m3-icon">assignment</span>과제: 시드 색상 팔레트 만들기</span>
+    <span class="pill"><span class="m3-icon">menu_book</span>읽기: 타입 스케일 가이드</span>
+  </div>
+  <div class="brand"><span class="m3-icon" data-filled="true">brush</span>M3 클래스 · 02주차 예고</div>
+  <span class="m3-icon glyph" data-filled="true">waving_hand</span>
+</section>
+</body>
+</html>

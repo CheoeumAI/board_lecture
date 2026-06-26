@@ -1,0 +1,217 @@
+/* ============================================================
+   COLOR — Material Design 3 baseline scheme
+   Seed: #6750A4 (M3 baseline primary).
+   Two layers:
+     1) Reference tonal palettes (--md-ref-palette-*)  — the raw tones
+     2) System color roles  (--md-sys-color-*)         — semantic, theme-aware
+   Light theme is the default on :root. Dark theme via
+   [data-theme="dark"] or .dark, plus prefers-color-scheme.
+   ============================================================ */
+
+:root {
+  /* ---- Reference tonal palettes (tone 0 = black … 100 = white) ---- */
+
+  /* Primary */
+  --md-ref-primary-0:   #000000;
+  --md-ref-primary-10:  #21005D;
+  --md-ref-primary-20:  #381E72;
+  --md-ref-primary-30:  #4F378B;
+  --md-ref-primary-40:  #6750A4;
+  --md-ref-primary-50:  #7F67BE;
+  --md-ref-primary-60:  #9A82DB;
+  --md-ref-primary-70:  #B69DF8;
+  --md-ref-primary-80:  #D0BCFF;
+  --md-ref-primary-90:  #EADDFF;
+  --md-ref-primary-95:  #F6EDFF;
+  --md-ref-primary-99:  #FFFBFE;
+  --md-ref-primary-100: #FFFFFF;
+
+  /* Secondary */
+  --md-ref-secondary-0:   #000000;
+  --md-ref-secondary-10:  #1D192B;
+  --md-ref-secondary-20:  #332D41;
+  --md-ref-secondary-30:  #4A4458;
+  --md-ref-secondary-40:  #625B71;
+  --md-ref-secondary-50:  #7A7289;
+  --md-ref-secondary-60:  #958DA5;
+  --md-ref-secondary-70:  #B0A7C0;
+  --md-ref-secondary-80:  #CCC2DC;
+  --md-ref-secondary-90:  #E8DEF8;
+  --md-ref-secondary-95:  #F6EDFF;
+  --md-ref-secondary-99:  #FFFBFE;
+  --md-ref-secondary-100: #FFFFFF;
+
+  /* Tertiary */
+  --md-ref-tertiary-0:   #000000;
+  --md-ref-tertiary-10:  #31111D;
+  --md-ref-tertiary-20:  #492532;
+  --md-ref-tertiary-30:  #633B48;
+  --md-ref-tertiary-40:  #7D5260;
+  --md-ref-tertiary-50:  #986977;
+  --md-ref-tertiary-60:  #B58392;
+  --md-ref-tertiary-70:  #D29DAC;
+  --md-ref-tertiary-80:  #EFB8C8;
+  --md-ref-tertiary-90:  #FFD8E4;
+  --md-ref-tertiary-95:  #FFECF1;
+  --md-ref-tertiary-99:  #FFFBFA;
+  --md-ref-tertiary-100: #FFFFFF;
+
+  /* Neutral */
+  --md-ref-neutral-0:   #000000;
+  --md-ref-neutral-10:  #1D1B20;
+  --md-ref-neutral-20:  #322F35;
+  --md-ref-neutral-30:  #48464C;
+  --md-ref-neutral-40:  #605D64;
+  --md-ref-neutral-50:  #79767D;
+  --md-ref-neutral-60:  #938F96;
+  --md-ref-neutral-70:  #AEA9B1;
+  --md-ref-neutral-80:  #CAC5CD;
+  --md-ref-neutral-90:  #E6E0E9;
+  --md-ref-neutral-95:  #F5EFF7;
+  --md-ref-neutral-99:  #FFFBFF;
+  --md-ref-neutral-100: #FFFFFF;
+
+  /* Neutral Variant */
+  --md-ref-neutral-variant-0:   #000000;
+  --md-ref-neutral-variant-10:  #1D1A22;
+  --md-ref-neutral-variant-20:  #322F37;
+  --md-ref-neutral-variant-30:  #49454F;
+  --md-ref-neutral-variant-40:  #605D66;
+  --md-ref-neutral-variant-50:  #79747E;
+  --md-ref-neutral-variant-60:  #938F99;
+  --md-ref-neutral-variant-70:  #AEA9B4;
+  --md-ref-neutral-variant-80:  #CAC4D0;
+  --md-ref-neutral-variant-90:  #E7E0EC;
+  --md-ref-neutral-variant-95:  #F5EEFA;
+  --md-ref-neutral-variant-99:  #FFFBFE;
+  --md-ref-neutral-variant-100: #FFFFFF;
+
+  /* Error */
+  --md-ref-error-0:   #000000;
+  --md-ref-error-10:  #410E0B;
+  --md-ref-error-20:  #601410;
+  --md-ref-error-30:  #8C1D18;
+  --md-ref-error-40:  #B3261E;
+  --md-ref-error-50:  #DC362E;
+  --md-ref-error-60:  #E46962;
+  --md-ref-error-70:  #EC928E;
+  --md-ref-error-80:  #F2B8B5;
+  --md-ref-error-90:  #F9DEDC;
+  --md-ref-error-95:  #FCEEEE;
+  --md-ref-error-99:  #FFFBF9;
+  --md-ref-error-100: #FFFFFF;
+}
+
+/* ============================================================
+   SYSTEM COLOR ROLES — LIGHT (default)
+   ============================================================ */
+:root {
+  --md-sys-color-primary:               #6750A4;
+  --md-sys-color-on-primary:            #FFFFFF;
+  --md-sys-color-primary-container:     #EADDFF;
+  --md-sys-color-on-primary-container:  #21005D;
+
+  --md-sys-color-secondary:             #625B71;
+  --md-sys-color-on-secondary:          #FFFFFF;
+  --md-sys-color-secondary-container:   #E8DEF8;
+  --md-sys-color-on-secondary-container:#1D192B;
+
+  --md-sys-color-tertiary:              #7D5260;
+  --md-sys-color-on-tertiary:           #FFFFFF;
+  --md-sys-color-tertiary-container:    #FFD8E4;
+  --md-sys-color-on-tertiary-container: #31111D;
+
+  --md-sys-color-error:                 #B3261E;
+  --md-sys-color-on-error:              #FFFFFF;
+  --md-sys-color-error-container:       #F9DEDC;
+  --md-sys-color-on-error-container:    #410E0B;
+
+  --md-sys-color-background:            #FEF7FF;
+  --md-sys-color-on-background:         #1D1B20;
+  --md-sys-color-surface:               #FEF7FF;
+  --md-sys-color-on-surface:            #1D1B20;
+  --md-sys-color-surface-variant:       #E7E0EC;
+  --md-sys-color-on-surface-variant:    #49454F;
+
+  --md-sys-color-outline:               #79747E;
+  --md-sys-color-outline-variant:       #CAC4D0;
+
+  --md-sys-color-shadow:                #000000;
+  --md-sys-color-scrim:                 #000000;
+
+  --md-sys-color-inverse-surface:       #322F35;
+  --md-sys-color-inverse-on-surface:    #F5EFF7;
+  --md-sys-color-inverse-primary:       #D0BCFF;
+
+  --md-sys-color-surface-tint:          #6750A4;
+
+  /* Surface containers (M3 elevation-as-tint system) */
+  --md-sys-color-surface-dim:               #DED8E1;
+  --md-sys-color-surface-bright:            #FEF7FF;
+  --md-sys-color-surface-container-lowest:  #FFFFFF;
+  --md-sys-color-surface-container-low:     #F7F2FA;
+  --md-sys-color-surface-container:         #F3EDF7;
+  --md-sys-color-surface-container-high:    #ECE6F0;
+  --md-sys-color-surface-container-highest: #E6E0E9;
+}
+
+/* ============================================================
+   SYSTEM COLOR ROLES — DARK
+   ============================================================ */
+[data-theme="dark"],
+.dark {
+  --md-sys-color-primary:               #D0BCFF;
+  --md-sys-color-on-primary:            #381E72;
+  --md-sys-color-primary-container:     #4F378B;
+  --md-sys-color-on-primary-container:  #EADDFF;
+
+  --md-sys-color-secondary:             #CCC2DC;
+  --md-sys-color-on-secondary:          #332D41;
+  --md-sys-color-secondary-container:   #4A4458;
+  --md-sys-color-on-secondary-container:#E8DEF8;
+
+  --md-sys-color-tertiary:              #EFB8C8;
+  --md-sys-color-on-tertiary:           #492532;
+  --md-sys-color-tertiary-container:    #633B48;
+  --md-sys-color-on-tertiary-container: #FFD8E4;
+
+  --md-sys-color-error:                 #F2B8B5;
+  --md-sys-color-on-error:              #601410;
+  --md-sys-color-error-container:       #8C1D18;
+  --md-sys-color-on-error-container:    #F9DEDC;
+
+  --md-sys-color-background:            #141218;
+  --md-sys-color-on-background:         #E6E0E9;
+  --md-sys-color-surface:               #141218;
+  --md-sys-color-on-surface:            #E6E0E9;
+  --md-sys-color-surface-variant:       #49454F;
+  --md-sys-color-on-surface-variant:    #CAC4D0;
+
+  --md-sys-color-outline:               #938F99;
+  --md-sys-color-outline-variant:       #49454F;
+
+  --md-sys-color-shadow:                #000000;
+  --md-sys-color-scrim:                 #000000;
+
+  --md-sys-color-inverse-surface:       #E6E0E9;
+  --md-sys-color-inverse-on-surface:    #322F35;
+  --md-sys-color-inverse-primary:       #6750A4;
+
+  --md-sys-color-surface-tint:          #D0BCFF;
+
+  --md-sys-color-surface-dim:               #141218;
+  --md-sys-color-surface-bright:            #3B383E;
+  --md-sys-color-surface-container-lowest:  #0F0D13;
+  --md-sys-color-surface-container-low:     #1D1B20;
+  --md-sys-color-surface-container:         #211F26;
+  --md-sys-color-surface-container-high:    #2B2930;
+  --md-sys-color-surface-container-highest: #36343B;
+}
+
+/* Auto dark: applies the dark scope when the OS prefers dark and the page
+   hasn't explicitly opted into light. Mirrors [data-theme="dark"] above. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not(.light):not([data-theme="dark"]) {
+    color-scheme: dark;
+  }
+}

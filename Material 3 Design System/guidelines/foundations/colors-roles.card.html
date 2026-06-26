@@ -1,0 +1,34 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Primary, Secondary & Tertiary roles" subtitle="Accent color roles + their containers" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 20px; background: var(--md-sys-color-surface); font-family: var(--md-sys-typescale-font-plain); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .group { display: grid; grid-template-columns: 1fr 1fr; }
+  .sw { height: 56px; display: flex; align-items: flex-end; padding: 6px 10px; font-size: 11px; font-weight: 500; box-sizing: border-box; }
+  .group :nth-child(1) { border-radius: 8px 0 0 0; }
+  .group :nth-child(2) { border-radius: 0 8px 0 0; }
+  .group :nth-child(3) { border-radius: 0 0 0 8px; }
+  .group :nth-child(4) { border-radius: 0 0 8px 0; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="group">
+    <div class="sw" style="background:var(--md-sys-color-primary);color:var(--md-sys-color-on-primary)">Primary</div>
+    <div class="sw" style="background:var(--md-sys-color-secondary);color:var(--md-sys-color-on-secondary)">Secondary</div>
+    <div class="sw" style="background:var(--md-sys-color-primary-container);color:var(--md-sys-color-on-primary-container)">P. Container</div>
+    <div class="sw" style="background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container)">S. Container</div>
+  </div>
+  <div class="group">
+    <div class="sw" style="background:var(--md-sys-color-tertiary);color:var(--md-sys-color-on-tertiary)">Tertiary</div>
+    <div class="sw" style="background:var(--md-sys-color-error);color:var(--md-sys-color-on-error)">Error</div>
+    <div class="sw" style="background:var(--md-sys-color-tertiary-container);color:var(--md-sys-color-on-tertiary-container)">T. Container</div>
+    <div class="sw" style="background:var(--md-sys-color-error-container);color:var(--md-sys-color-on-error-container)">E. Container</div>
+  </div>
+</div>
+</body>
+</html>

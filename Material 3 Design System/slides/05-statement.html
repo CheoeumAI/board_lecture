@@ -1,0 +1,30 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Big statement slide" subtitle="Single emphatic idea on inverse surface" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html, body { margin: 0; }
+  .slide {
+    width: 1280px; height: 720px; box-sizing: border-box;
+    background: var(--md-sys-color-inverse-surface);
+    color: var(--md-sys-color-inverse-on-surface);
+    font-family: var(--md-sys-typescale-font-plain);
+    padding: 96px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .mark { font-size: 120px; line-height: .8; color: var(--md-sys-color-inverse-primary); }
+  blockquote { margin: 16px 0 0; font-size: 60px; line-height: 1.15; font-weight: 400; letter-spacing: -0.5px; max-width: 24ch; }
+  .by { margin-top: 40px; font-size: 24px; opacity: .75; display: flex; align-items: center; gap: 12px; }
+  .by .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+</style>
+</head>
+<body>
+<section class="slide" data-screen-label="Big statement">
+  <span class="m3-icon mark" data-filled="true">format_quote</span>
+  <blockquote>좋은 디자인 시스템은 결정을 줄이고, 일관성을 늘린다.</blockquote>
+  <div class="by"><span>핵심 원칙</span><span class="dot"></span><span>토큰 → 역할 → 컴포넌트</span></div>
+</section>
+</body>
+</html>

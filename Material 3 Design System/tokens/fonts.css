@@ -1,0 +1,33 @@
+/* ============================================================
+   FONTS — Material Design 3 typefaces
+   Roboto (Latin/numeric) + Noto Sans KR (Hangul) + Material Symbols (icons)
+   Loaded from Google Fonts so the @font-face closure ships to consumers.
+   ============================================================ */
+
+/* Roboto — the Material brand & plain font (weights 300–700) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Noto Sans KR — Hangul companion, matched weights */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* Material Symbols (Rounded) — the M3 icon set, variable axes */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+/* Icon helper class — apply to a span containing the symbol name. */
+.material-symbols-rounded,
+.m3-icon {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.m3-icon[data-filled="true"] { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }

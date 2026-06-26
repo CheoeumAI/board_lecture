@@ -1,0 +1,48 @@
+<!-- @dsCard group="Components" viewport="700x320" name="Cards, Lists, Dividers & Dialog" subtitle="Containment surfaces and list items" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: var(--md-sys-color-background); font-family: var(--md-sys-typescale-font-plain); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  .label { font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--md-sys-color-on-surface-variant); margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { Card, ListItem, Divider, Switch } = window.Material3DesignSystem_fd173f;
+  function Demo() {
+    return (
+      <div className="grid">
+        <div>
+          <p className="label">Cards</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <Card variant="elevated"><div style={{ padding: '16px' }}><div className="md-typescale-title-medium">Elevated</div><div className="md-typescale-body-medium" style={{ color: 'var(--md-sys-color-on-surface-variant)' }}>그림자가 있는 표면</div></div></Card>
+            <Card variant="filled"><div style={{ padding: '16px' }}><div className="md-typescale-title-medium">Filled</div><div className="md-typescale-body-medium" style={{ color: 'var(--md-sys-color-on-surface-variant)' }}>채워진 표면</div></div></Card>
+            <Card variant="outlined"><div style={{ padding: '16px' }}><div className="md-typescale-title-medium">Outlined</div><div className="md-typescale-body-medium" style={{ color: 'var(--md-sys-color-on-surface-variant)' }}>외곽선 표면</div></div></Card>
+          </div>
+        </div>
+        <div>
+          <p className="label">List items + divider</p>
+          <Card variant="outlined">
+            <ListItem leadingIcon="folder" headline="프로젝트" supportingText="24개 항목" trailingIcon="chevron_right" interactive />
+            <Divider inset />
+            <ListItem leadingIcon="image" headline="사진" supportingText="1,204개 항목" trailingIcon="chevron_right" interactive />
+            <Divider inset />
+            <ListItem leadingIcon="wifi" headline="Wi-Fi" trailing={<Switch defaultChecked />} />
+          </Card>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

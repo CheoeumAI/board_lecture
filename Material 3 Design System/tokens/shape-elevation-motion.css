@@ -1,0 +1,77 @@
+/* ============================================================
+   SHAPE, ELEVATION, SPACING, STATE & MOTION
+   Material Design 3 system tokens.
+   ============================================================ */
+
+:root {
+  /* ---- Shape / corner radius ---- */
+  --md-sys-shape-corner-none:            0px;
+  --md-sys-shape-corner-extra-small:     4px;
+  --md-sys-shape-corner-small:           8px;
+  --md-sys-shape-corner-medium:          12px;
+  --md-sys-shape-corner-large:           16px;
+  --md-sys-shape-corner-extra-large:     28px;
+  --md-sys-shape-corner-full:            9999px;
+
+  /* ---- Elevation (shadow recipes, levels 0–5) ---- */
+  --md-sys-elevation-0: none;
+  --md-sys-elevation-1: 0px 1px 2px 0px rgba(0,0,0,0.30), 0px 1px 3px 1px rgba(0,0,0,0.15);
+  --md-sys-elevation-2: 0px 1px 2px 0px rgba(0,0,0,0.30), 0px 2px 6px 2px rgba(0,0,0,0.15);
+  --md-sys-elevation-3: 0px 1px 3px 0px rgba(0,0,0,0.30), 0px 4px 8px 3px rgba(0,0,0,0.15);
+  --md-sys-elevation-4: 0px 2px 3px 0px rgba(0,0,0,0.30), 0px 6px 10px 4px rgba(0,0,0,0.15);
+  --md-sys-elevation-5: 0px 4px 4px 0px rgba(0,0,0,0.30), 0px 8px 12px 6px rgba(0,0,0,0.15);
+
+  /* ---- Spacing (4dp base grid) ---- */
+  --md-sys-spacing-0:  0px;
+  --md-sys-spacing-1:  4px;
+  --md-sys-spacing-2:  8px;
+  --md-sys-spacing-3:  12px;
+  --md-sys-spacing-4:  16px;
+  --md-sys-spacing-5:  20px;
+  --md-sys-spacing-6:  24px;
+  --md-sys-spacing-7:  28px;
+  --md-sys-spacing-8:  32px;
+  --md-sys-spacing-10: 40px;
+  --md-sys-spacing-12: 48px;
+  --md-sys-spacing-14: 56px;
+  --md-sys-spacing-16: 64px;
+
+  /* ---- State layer opacities ---- */
+  --md-sys-state-hover-opacity:        0.08; /* @kind other */
+  --md-sys-state-focus-opacity:        0.12; /* @kind other */
+  --md-sys-state-pressed-opacity:      0.12; /* @kind other */
+  --md-sys-state-dragged-opacity:      0.16; /* @kind other */
+  --md-sys-state-disabled-content:     0.38; /* @kind other */
+  --md-sys-state-disabled-container:   0.12; /* @kind other */
+
+  /* ---- Motion: easing ---- */
+  --md-sys-motion-easing-linear:                  cubic-bezier(0, 0, 1, 1); /* @kind other */
+  --md-sys-motion-easing-standard:                cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --md-sys-motion-easing-standard-accelerate:     cubic-bezier(0.3, 0, 1, 1); /* @kind other */
+  --md-sys-motion-easing-standard-decelerate:     cubic-bezier(0, 0, 0, 1); /* @kind other */
+  --md-sys-motion-easing-emphasized:              cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --md-sys-motion-easing-emphasized-accelerate:   cubic-bezier(0.3, 0, 0.8, 0.15); /* @kind other */
+  --md-sys-motion-easing-emphasized-decelerate:   cubic-bezier(0.05, 0.7, 0.1, 1); /* @kind other */
+
+  /* ---- Motion: duration ---- */
+  --md-sys-motion-duration-short1:      50ms; /* @kind other */
+  --md-sys-motion-duration-short2:      100ms; /* @kind other */
+  --md-sys-motion-duration-short3:      150ms; /* @kind other */
+  --md-sys-motion-duration-short4:      200ms; /* @kind other */
+  --md-sys-motion-duration-medium1:     250ms; /* @kind other */
+  --md-sys-motion-duration-medium2:     300ms; /* @kind other */
+  --md-sys-motion-duration-medium3:     350ms; /* @kind other */
+  --md-sys-motion-duration-medium4:     400ms; /* @kind other */
+  --md-sys-motion-duration-long1:       450ms; /* @kind other */
+  --md-sys-motion-duration-long2:       500ms; /* @kind other */
+  --md-sys-motion-duration-long3:       550ms; /* @kind other */
+  --md-sys-motion-duration-long4:       600ms; /* @kind other */
+}
+
+/* Elevation helper classes */
+.md-elevation-0 { box-shadow: var(--md-sys-elevation-0); }
+.md-elevation-1 { box-shadow: var(--md-sys-elevation-1); }
+.md-elevation-2 { box-shadow: var(--md-sys-elevation-2); }
+.md-elevation-3 { box-shadow: var(--md-sys-elevation-3); }
+.md-elevation-4 { box-shadow: var(--md-sys-elevation-4); }
+.md-elevation-5 { box-shadow: var(--md-sys-elevation-5); }

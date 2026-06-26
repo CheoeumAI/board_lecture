@@ -1,0 +1,33 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Section divider" subtitle="Chapter break — primary surface, large numeral" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html, body { margin: 0; }
+  .slide {
+    width: 1280px; height: 720px; box-sizing: border-box;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-family: var(--md-sys-typescale-font-plain);
+    padding: 96px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .num { font-size: 200px; line-height: 1; font-weight: 400; opacity: .35; letter-spacing: -4px; }
+  h2 { margin: 8px 0 0; font-size: 76px; line-height: 1.05; font-weight: 400; letter-spacing: -1px; }
+  .lead { margin: 24px 0 0; font-size: 26px; line-height: 1.45; opacity: .85; max-width: 40ch; }
+  .rule { width: 96px; height: 6px; border-radius: 3px; background: var(--md-sys-color-on-primary); opacity: .9; margin-top: 40px; }
+  .tag { position: absolute; top: 64px; right: 96px; font-size: 22px; opacity: .7; letter-spacing: 2px; }
+</style>
+</head>
+<body>
+<section class="slide" data-screen-label="Section divider">
+  <span class="tag">SECTION 02</span>
+  <span class="num">02</span>
+  <h2>다이내믹 컬러</h2>
+  <p class="lead">하나의 시드 색상에서 톤 팔레트와 시스템 색상 역할이 어떻게 생성되는지 살펴봅니다.</p>
+  <div class="rule"></div>
+</section>
+</body>
+</html>

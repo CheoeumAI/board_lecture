@@ -1,0 +1,27 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Spacing scale" subtitle="4dp base grid — the rhythm of every layout" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: var(--md-sys-color-surface); font-family: var(--md-sys-typescale-font-plain); color: var(--md-sys-color-on-surface); }
+  .scale { display: flex; align-items: flex-end; gap: 14px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .bar { background: var(--md-sys-color-primary); border-radius: 2px; width: 100%; }
+  .v { font-size: 11px; color: var(--md-sys-color-on-surface-variant); }
+</style>
+</head>
+<body>
+<div class="scale">
+  <div class="item" style="width:20px"><div class="bar" style="height:var(--md-sys-spacing-1)"></div><span class="v">4</span></div>
+  <div class="item" style="width:20px"><div class="bar" style="height:var(--md-sys-spacing-2)"></div><span class="v">8</span></div>
+  <div class="item" style="width:24px"><div class="bar" style="height:var(--md-sys-spacing-3)"></div><span class="v">12</span></div>
+  <div class="item" style="width:24px"><div class="bar" style="height:var(--md-sys-spacing-4)"></div><span class="v">16</span></div>
+  <div class="item" style="width:28px"><div class="bar" style="height:var(--md-sys-spacing-6)"></div><span class="v">24</span></div>
+  <div class="item" style="width:28px"><div class="bar" style="height:var(--md-sys-spacing-8)"></div><span class="v">32</span></div>
+  <div class="item" style="width:32px"><div class="bar" style="height:var(--md-sys-spacing-12)"></div><span class="v">48</span></div>
+  <div class="item" style="width:32px"><div class="bar" style="height:var(--md-sys-spacing-16)"></div><span class="v">64</span></div>
+</div>
+</body>
+</html>

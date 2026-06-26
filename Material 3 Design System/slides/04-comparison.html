@@ -1,0 +1,50 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Comparison slide" subtitle="Two-column side-by-side cards" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html, body { margin: 0; }
+  .slide {
+    width: 1280px; height: 720px; box-sizing: border-box;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-sys-typescale-font-plain);
+    padding: 80px 96px; position: relative; overflow: hidden;
+  }
+  h2 { margin: 0; font-size: 52px; line-height: 1.1; font-weight: 400; letter-spacing: -0.5px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+  .col { border-radius: 28px; padding: 40px; }
+  .a { background: var(--md-sys-color-surface-container-high); }
+  .b { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+  .ch { display: inline-flex; align-items: center; gap: 10px; font-size: 24px; font-weight: 500; margin-bottom: 24px; }
+  .ch .m3-icon { font-size: 30px; }
+  .li { display: flex; gap: 12px; align-items: flex-start; font-size: 22px; line-height: 1.4; margin-bottom: 16px; }
+  .li .m3-icon { font-size: 24px; margin-top: 1px; }
+  .a .ch { color: var(--md-sys-color-on-surface); }
+  .a .li { color: var(--md-sys-color-on-surface-variant); }
+  .footer { position: absolute; bottom: 48px; left: 96px; right: 96px; display: flex; justify-content: space-between; font-size: 18px; color: var(--md-sys-color-on-surface-variant); }
+</style>
+</head>
+<body>
+<section class="slide" data-screen-label="Comparison">
+  <h2>Filled vs. Tonal 버튼</h2>
+  <div class="cols">
+    <div class="col a">
+      <span class="ch"><span class="m3-icon" data-filled="true">radio_button_checked</span>Filled</span>
+      <div class="li"><span class="m3-icon">check</span>화면에서 가장 높은 강조</div>
+      <div class="li"><span class="m3-icon">check</span>주요 행동(저장, 다음) 하나에만</div>
+      <div class="li"><span class="m3-icon">check</span>primary / on-primary 색상 사용</div>
+    </div>
+    <div class="col b">
+      <span class="ch"><span class="m3-icon" data-filled="true">radio_button_checked</span>Tonal</span>
+      <div class="li"><span class="m3-icon">check</span>중간 강조 — 보조 행동에</div>
+      <div class="li"><span class="m3-icon">check</span>Filled 옆에서 균형을 잡을 때</div>
+      <div class="li"><span class="m3-icon">check</span>secondary-container 색상 사용</div>
+    </div>
+  </div>
+  <div class="footer"><span>Material Design 3 · 강의</span><span>04</span></div>
+</section>
+</body>
+</html>

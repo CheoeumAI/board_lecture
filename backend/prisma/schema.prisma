@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum NoticeCategory {
+  NOTICE
+  BID
+  PRIVATE_CONTRACT
+}
+
+enum NoticeStatus {
+  DRAFT
+  PUBLISHED
+  HIDDEN
+}
+
+enum AdminRole {
+  ADMIN
+}
+
+model Notice {
+  id          Int            @id @default(autoincrement())
+  category    NoticeCategory
+  title       String
+  content     String
+  isPinned    Boolean        @default(false)
+  publishedAt DateTime?
+  views       Int            @default(0)
+  status      NoticeStatus   @default(DRAFT)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+  attachments Attachment[]
+
+  @@index([status, category, isPinned, publishedAt])
+  @@index([title])
+}
+
+model Attachment {
+  id            Int      @id @default(autoincrement())
+  noticeId      Int?
+  notice        Notice?  @relation(fields: [noticeId], references: [id], onDelete: SetNull)
+  fileName      String
+  fileKey       String   @unique
+  mimeType      String
+  size          Int
+  downloadCount Int      @default(0)
+  createdAt     DateTime @default(now())
+
+  @@index([noticeId])
+}
+
+model AdminUser {
+  id           Int       @id @default(autoincrement())
+  email        String    @unique
+  passwordHash String
+  role         AdminRole @default(ADMIN)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}

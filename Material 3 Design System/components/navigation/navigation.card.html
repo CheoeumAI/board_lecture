@@ -1,0 +1,61 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Tabs, App Bar, Navigation Bar & Menu" subtitle="Navigation components" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: var(--md-sys-color-background); font-family: var(--md-sys-typescale-font-plain); }
+  .label { font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--md-sys-color-on-surface-variant); margin: 0 0 8px; }
+  .stack { display: flex; flex-direction: column; gap: 18px; }
+  .panel { border-radius: 12px; overflow: hidden; border: 1px solid var(--md-sys-color-outline-variant); }
+  .two { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; align-items: start; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { Tabs, TopAppBar, NavigationBar, Menu } = window.Material3DesignSystem_fd173f;
+  function Demo() {
+    return (
+      <div className="stack">
+        <div>
+          <p className="label">Top app bar · Tabs</p>
+          <div className="panel">
+            <TopAppBar title="받은편지함" navIcon="menu" actions={[{icon:'search'},{icon:'more_vert'}]} />
+            <Tabs tabs={[{value:'a',label:'전체',icon:'inbox'},{value:'b',label:'중요',icon:'star'},{value:'c',label:'보관',icon:'archive'}]} defaultValue="a" />
+          </div>
+        </div>
+        <div className="two">
+          <div>
+            <p className="label">Navigation bar</p>
+            <div className="panel">
+              <NavigationBar items={[
+                {value:'home',label:'홈',icon:'home'},
+                {value:'explore',label:'탐색',icon:'explore'},
+                {value:'alerts',label:'알림',icon:'notifications',badge:3},
+                {value:'me',label:'내 정보',icon:'person'},
+              ]} defaultValue="home" />
+            </div>
+          </div>
+          <div>
+            <p className="label">Menu</p>
+            <Menu items={[
+              {value:'edit', label:'수정', icon:'edit'},
+              {value:'share', label:'공유', icon:'share', trailing:'⌘S'},
+              {divider:true},
+              {value:'delete', label:'삭제', icon:'delete'},
+            ]} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

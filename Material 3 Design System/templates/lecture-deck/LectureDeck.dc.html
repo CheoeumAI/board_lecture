@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Lecture Deck (M3)" description="Three Material 3 lecture slides — title, content, closing — at 1280×720, ready to duplicate and edit." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<style>
+  body { margin: 0; background: #2b2930; }
+  .deck-wrap { display: flex; flex-direction: column; align-items: center; gap: 32px; padding: 32px; font-family: var(--md-sys-typescale-font-plain); }
+  .slide { width: 1280px; height: 720px; box-sizing: border-box; overflow: hidden; position: relative; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+</style>
+</helmet>
+
+<div class="deck-wrap">
+
+  <!-- ===== Slide 1 · Title ===== -->
+  <section class="slide" data-screen-label="Title" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 80px 96px; display: flex; flex-direction: column; justify-content: center;">
+    <div style="display:flex; align-items:center; gap:12px; position:absolute; top:64px; left:96px;">
+      <span class="m3-icon" data-filled="true" style="font-size:36px;">brush</span>
+      <span style="font-size:26px; font-weight:500;">M3 클래스</span>
+    </div>
+    <span style="display:inline-flex; align-items:center; gap:8px; align-self:flex-start; background: color-mix(in srgb, var(--md-sys-color-on-primary-container) 12%, transparent); padding:8px 16px; border-radius:999px; font-size:20px; font-weight:500; margin-bottom:24px;">
+      <span class="m3-icon" style="font-size:20px;">auto_awesome</span>Material You · 2026
+    </span>
+    <h1 style="margin:0; font-size:92px; line-height:1.02; letter-spacing:-1px; font-weight:400;">강의 제목을<br>여기에</h1>
+    <p style="margin:28px 0 0; font-size:28px; line-height:1.4; opacity:.82; max-width:30ch;">부제목 또는 한 줄 설명을 입력하세요</p>
+    <div style="position:absolute; bottom:64px; left:96px; display:flex; align-items:center; gap:16px; font-size:22px; opacity:.8;">
+      <span>1주차 · 오리엔테이션</span>
+      <span style="width:6px; height:6px; border-radius:50%; background:currentColor;"></span>
+      <span>발표자 이름</span>
+    </div>
+    <span class="m3-icon" data-filled="true" style="position:absolute; right:-40px; bottom:-40px; font-size:420px; opacity:.12;">palette</span>
+  </section>
+
+  <!-- ===== Slide 2 · Content ===== -->
+  <section class="slide" data-screen-label="Content" style="background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface); padding: 80px 96px;">
+    <span style="font-size:20px; font-weight:500; letter-spacing:1.5px; text-transform:uppercase; color: var(--md-sys-color-primary);">주제 영역</span>
+    <h2 style="margin:12px 0 0; font-size:56px; line-height:1.1; font-weight:400; letter-spacing:-0.5px; max-width:22ch;">핵심 메시지를 한 문장으로</h2>
+    <div style="display:flex; flex-direction:column; gap:20px; margin-top:48px;">
+      <div style="display:flex; gap:20px; align-items:flex-start;">
+        <span style="width:56px; height:56px; flex-shrink:0; border-radius:16px; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); display:flex; align-items:center; justify-content:center;"><span class="m3-icon" style="font-size:30px;">looks_one</span></span>
+        <div><div style="font-size:26px; font-weight:500;">첫 번째 요점</div><div style="font-size:21px; line-height:1.45; color: var(--md-sys-color-on-surface-variant); margin-top:2px; max-width:64ch;">설명 텍스트를 입력하세요. 한 줄에서 두 줄 정도가 적당합니다.</div></div>
+      </div>
+      <div style="display:flex; gap:20px; align-items:flex-start;">
+        <span style="width:56px; height:56px; flex-shrink:0; border-radius:16px; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); display:flex; align-items:center; justify-content:center;"><span class="m3-icon" style="font-size:30px;">looks_two</span></span>
+        <div><div style="font-size:26px; font-weight:500;">두 번째 요점</div><div style="font-size:21px; line-height:1.45; color: var(--md-sys-color-on-surface-variant); margin-top:2px; max-width:64ch;">설명 텍스트를 입력하세요.</div></div>
+      </div>
+      <div style="display:flex; gap:20px; align-items:flex-start;">
+        <span style="width:56px; height:56px; flex-shrink:0; border-radius:16px; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); display:flex; align-items:center; justify-content:center;"><span class="m3-icon" style="font-size:30px;">looks_3</span></span>
+        <div><div style="font-size:26px; font-weight:500;">세 번째 요점</div><div style="font-size:21px; line-height:1.45; color: var(--md-sys-color-on-surface-variant); margin-top:2px; max-width:64ch;">설명 텍스트를 입력하세요.</div></div>
+      </div>
+    </div>
+    <div style="position:absolute; bottom:48px; left:96px; right:96px; display:flex; justify-content:space-between; font-size:18px; color: var(--md-sys-color-on-surface-variant); border-top:1px solid var(--md-sys-color-outline-variant); padding-top:16px;">
+      <span>Material Design 3 · 강의</span><span>02</span>
+    </div>
+  </section>
+
+  <!-- ===== Slide 3 · Closing ===== -->
+  <section class="slide" data-screen-label="Closing" style="background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); padding: 96px; display:flex; flex-direction:column; justify-content:center;">
+    <h2 style="margin:0; font-size:80px; line-height:1.05; font-weight:400; letter-spacing:-1px;">다음 주에 만나요</h2>
+    <div style="display:flex; gap:16px; margin-top:48px;">
+      <span style="display:inline-flex; align-items:center; gap:10px; background: color-mix(in srgb, var(--md-sys-color-on-tertiary-container) 12%, transparent); padding:14px 24px; border-radius:999px; font-size:22px; font-weight:500;"><span class="m3-icon" style="font-size:24px;">assignment</span>과제 안내를 입력</span>
+      <span style="display:inline-flex; align-items:center; gap:10px; background: color-mix(in srgb, var(--md-sys-color-on-tertiary-container) 12%, transparent); padding:14px 24px; border-radius:999px; font-size:22px; font-weight:500;"><span class="m3-icon" style="font-size:24px;">menu_book</span>읽기 자료를 입력</span>
+    </div>
+    <div style="position:absolute; bottom:64px; left:96px; display:flex; align-items:center; gap:12px; font-size:24px; font-weight:500;">
+      <span class="m3-icon" data-filled="true" style="font-size:32px;">brush</span>M3 클래스
+    </div>
+    <span class="m3-icon" data-filled="true" style="position:absolute; right:-30px; top:-30px; font-size:360px; opacity:.12;">waving_hand</span>
+  </section>
+
+</div>
+
+</x-dc>
+</body>
+</html>

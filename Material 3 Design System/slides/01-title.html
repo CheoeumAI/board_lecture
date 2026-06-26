@@ -1,0 +1,39 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Title slide" subtitle="Course opener — primary container" -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html, body { margin: 0; }
+  .slide {
+    width: 1280px; height: 720px; box-sizing: border-box;
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    font-family: var(--md-sys-typescale-font-plain);
+    padding: 80px 96px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; position: absolute; top: 64px; left: 96px; }
+  .brand .m3-icon { font-size: 36px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+    background: color-mix(in srgb, var(--md-sys-color-on-primary-container) 12%, transparent);
+    padding: 8px 16px; border-radius: 999px; font-size: 20px; font-weight: 500; margin-bottom: 24px; }
+  h1 { margin: 0; font-size: 92px; line-height: 1.02; letter-spacing: -1px; font-weight: 400; }
+  .sub { margin: 28px 0 0; font-size: 28px; line-height: 1.4; opacity: .82; max-width: 30ch; }
+  .meta { position: absolute; bottom: 64px; left: 96px; display: flex; align-items: center; gap: 16px; font-size: 22px; opacity: .8; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .glyph { position: absolute; right: -40px; bottom: -40px; font-size: 420px; opacity: .12; }
+</style>
+</head>
+<body>
+<section class="slide" data-screen-label="Title">
+  <div class="brand"><span class="m3-icon" data-filled="true">brush</span><span style="font-size:26px;font-weight:500">M3 클래스</span></div>
+  <span class="chip"><span class="m3-icon" style="font-size:20px">auto_awesome</span>Material You · 2026</span>
+  <h1>Material<br />Design 3</h1>
+  <p class="sub">구글의 오픈 디자인 시스템을 처음부터 제대로 배우는 8주 과정</p>
+  <div class="meta"><span>1주차 · 오리엔테이션</span><span class="dot"></span><span>디자인 시스템 강의</span></div>
+  <span class="m3-icon glyph" data-filled="true">palette</span>
+</section>
+</body>
+</html>
