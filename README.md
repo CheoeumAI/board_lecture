@@ -21,15 +21,15 @@ cp .env.example .env
 - `DATABASE_URL`
 - `AUTH_SECRET`
 - `NEXTAUTH_URL`
-- `ADMIN_EMAIL`
-- `ADMIN_PASSWORD`
 - `S3_ENDPOINT`
 - `S3_REGION`
 - `S3_BUCKET`
 - `S3_ACCESS_KEY_ID`
 - `S3_SECRET_ACCESS_KEY`
 
-3. Prisma 마이그레이션과 관리자 seed를 실행합니다.
+관리자 seed를 생성하려면 `ADMIN_EMAIL`과 `ADMIN_PASSWORD`를 `.env`에 직접 추가합니다. 두 값이 없으면 샘플 공지만 생성합니다.
+
+3. Prisma 마이그레이션과 seed를 실행합니다.
 
 ```bash
 npm run prisma:migrate
@@ -52,7 +52,7 @@ npm run dev
 - `npm run typecheck`: TypeScript 검사
 - `npm test`: Vitest 단위 테스트
 - `npm run prisma:migrate`: PostgreSQL 마이그레이션
-- `npm run prisma:seed`: 초기 관리자와 샘플 공지 생성
+- `npm run prisma:seed`: 샘플 공지 생성, `ADMIN_EMAIL`과 `ADMIN_PASSWORD`가 있을 때만 관리자 생성
 
 ## Project Structure
 

@@ -4,15 +4,20 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-  const email = process.env.ADMIN_EMAIL ?? "admin@example.com";
-  const password = process.env.ADMIN_PASSWORD ?? "ChangeMe123!";
-  const passwordHash = await bcrypt.hash(password, 12);
+  const email = process.env.ADMIN_EMAIL?.trim();
+  const password = process.env.ADMIN_PASSWORD;
 
-  await prisma.adminUser.upsert({
-    where: { email },
-    update: { passwordHash },
-    create: { email, passwordHash }
-  });
+  if (email && password) {
+    const passwordHash = await bcrypt.hash(password, 12);
+
+    await prisma.adminUser.upsert({
+      where: { email },
+      update: { passwordHash },
+      create: { email, passwordHash }
+    });
+  } else if (email || password) {
+    throw new Error("ADMIN_EMAIL and ADMIN_PASSWORD must be provided together to seed an admin user.");
+  }
 
   const publishedAt = new Date();
   const samples = [
